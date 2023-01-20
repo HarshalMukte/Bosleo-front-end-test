@@ -1,0 +1,42 @@
+footer {
+  width: 100%;
+  min-height: 72px;
+  padding: 10px;
+  background: #000000;
+  border: 1px solid #e0e0e0;
+  text-transform: capitalize;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #6a6a6a;
+
+  .logo {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    font-style: normal;
+    /* Brand Gradients/Moviebox Primary */
+    background: linear-gradient(
+      273.64deg,
+      #35c3f3 11.27%,
+      #8b9fe8 36.72%,
+      #e681d8 61.72%,
+      #ffa9a4 82.79%,
+      #fed2ce 107.29%,
+      #fed2ce 107.29%
+    );
+    cursor: pointer;
+    text-decoration: none;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    text-transform: lowercase;
+  }
+}

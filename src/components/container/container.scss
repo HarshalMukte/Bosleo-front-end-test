@@ -1,0 +1,317 @@
+@import "../variables";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px 128px;
+  gap: 32px;
+
+  @media #{$media-desktop} {
+    padding: 32px 75px;
+  }
+  @media #{$media-mobile} {
+    padding: 32px 40px;
+  }
+  @media #{$media-mobile-sm} {
+    padding: 32px 25px;
+  }
+
+  .section1 {
+    width: 100%;
+    height: 364px;
+    display: flex;
+    flex-direction: row !important;
+    align-items: center;
+    padding: 0px;
+    gap: 32px;
+
+    @media only screen and (max-width: 900px) {
+      flex-direction: column !important;
+      height: 100%;
+      padding: 32px 75px;
+
+      .movieImage{
+        width: 100%;
+        max-height: 364px;
+        overflow: hidden;
+      }
+    }
+
+    .movieImage {
+      min-width: 356px;
+      height: 100%;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      overflow: hidden;
+      
+      &:hover img{
+        scale: 1.1;
+      }
+
+      @media only screen and (max-width: 900px){
+        min-width: 200px;
+      }
+      
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: .5s;
+      }
+    }
+    .lineGraph {
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      width: 100%;
+      height: 100%;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 24px;
+      gap: 24px;
+
+      .chartContainer {
+        width: 100%;
+        height: 100%;
+        position: relative;
+      }
+    }
+  }
+
+  .section1,
+  .section2,
+  .section3,
+  .section4 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    gap: 32px;
+
+    .tableTitle {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+
+      .title {
+        h3 {
+          font-style: normal;
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 20px;
+          color: #000000;
+          margin-bottom: 4px;
+        }
+        p {
+          font-style: normal;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 17px;
+          color: #6a6a6a;
+        }
+      }
+    }
+
+    .Table {
+      width: 100%;
+
+      .rdt_Table {
+        width: 100%;
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+
+        .rdt_TableHeadRow {
+          border-radius: 8px 8px 0px 0px;
+          background: #f5f5f5;
+          font-weight: 600;
+          font-size: 14px;
+          line-height: 17px;
+        }
+        .rdt_TableRow {
+          color: #000000;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 17px;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          padding: 24px 0px;
+          gap: 8px;
+
+          &:last-child {
+            border-radius: 0px 0px 8px 8px;
+          }
+        }
+
+        .tableButton {
+          padding: 8px 16px;
+          background: #d1d8f7;
+          border-radius: 41px;
+          border: none;
+          color: #4755a8;
+          font-weight: 500;
+          font-size: 10px;
+          line-height: 12px;
+          letter-spacing: 0.05em;
+          text-transform: uppercase;
+          margin: 0px 4px;
+          &:first-child {
+            margin-left: 0px;
+          }
+        }
+      }
+    }
+
+    .trending {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 15px;
+      color: #7281d3;
+
+      svg {
+        margin-right: 4px;
+      }
+    }
+  }
+
+  .section4 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    .movieName {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 10px;
+
+      img {
+        width: 32px;
+        min-width: 32px;
+        height: 32px;
+        border: 1px solid #e0e0e0;
+        border-radius: 49%;
+        object-fit: cover;
+      }
+    }
+    .viewBtn {
+      padding: 8px 16px;
+      background: #ffffff;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 17px;
+      color: #000000;
+      transition: 0.2s;
+
+      &:hover {
+        background-color: #000;
+        color: #fff;
+      }
+    }
+
+  
+    .moviesButtons {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      padding: 0px;
+      border-bottom: 1px solid #eeeeee;
+      gap: 8px;
+
+      button {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+        cursor: pointer;
+        border: none;
+        outline: none;
+        background-color: inherit;
+        padding: 10px 10px;
+        position: relative;
+        color: #aaaaaa;
+        transition: 0.2s;
+
+        &:hover {
+          color: #000;
+        }
+
+        .indicator {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 0%;
+          height: 2px;
+          background: linear-gradient(
+            273.64deg,
+            #35c3f3 11.27%,
+            #8b9fe8 36.72%,
+            #e681d8 61.72%,
+            #ffa9a4 82.79%,
+            #fed2ce 107.29%,
+            #fed2ce 107.29%
+          );
+          border-radius: 8px;
+        }
+        &.active {
+          color: #000;
+
+          .indicator {
+            width: 100%;
+          }
+        }
+      }
+    }
+    .searchBtn {
+      max-width: 276px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 16px;
+      gap: 8px;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      flex: 1;
+
+      @media #{$media-tablet} {
+        padding: 14px;
+      }
+      @media #{$media-mobile} {
+        padding: 14px;
+      }
+      @media #{$media-mobile-sm} {
+        padding: 12px;
+      }
+
+      input {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        color: #6a6a6a;
+        outline: none;
+        border: none;
+      }
+    }
+    .tableTitle{
+      @media #{$media-mobile-sm} {
+        flex-direction: column;
+        align-items: flex-start;
+
+        .searchBtn{
+          width: 100%;
+        }
+      }
+    }
+  }
+}
